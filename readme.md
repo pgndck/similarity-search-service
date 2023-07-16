@@ -14,7 +14,7 @@ This project is a gRPC-based similarity search service implemented in Python, wh
 1. **Clone the repository:**
 
 ```bash
-git clone https://github.com/yourusername/similarity-search-service.git
+git clone https://github.com/pgndck/similarity-search-service.git
 cd similarity-search-service
 ```
 
@@ -31,6 +31,12 @@ docker-compose up
 ```
 
 Your application should now be running and accessible on port 5001.
+
+4. _But as I didn't manage to do this in time, I couldn't finish setting up docker image in time :/ That is why you should just run:_
+
+```bash
+python ./server.py
+```
 
 ## Usage
 
