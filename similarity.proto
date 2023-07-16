@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+package similarity;
+
+service SimilaritySearchService {
+  rpc AddItem(AddItemRequest) returns (AddItemResponse) {}
+  rpc SearchItems(SearchItemsRequest) returns (SearchItemsResponse) {}
+  rpc GetSearchResults(GetSearchResultsRequest) returns (GetSearchResultsResponse) {}
+}
+
+message AddItemRequest {
+  string id = 1;
+  string description = 2;
+}
+
+message AddItemResponse {
+  int32 status = 1;
+  string message = 2;
+}
+
+message SearchItemsRequest {
+  string query = 1;
+}
+
+message SearchItemsResponse {
+  string search_id = 1;
+}
+
+message GetSearchResultsRequest {
+  string search_id = 1;
+}
+
+message GetSearchResultsResponse {
+  repeated SearchResult results = 1;
+}
+
+message SearchResult {
+  string id = 1;
+  string description = 2;
+}
